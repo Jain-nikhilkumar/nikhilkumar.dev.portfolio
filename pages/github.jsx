@@ -60,38 +60,49 @@ const GithubPage = ({ repos, user }) => {
 };
 
 export async function getStaticProps() {
-  const userRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
-    {
-      headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
-      },
+  try {
+    const userRes = await fetch(
+      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}`,
+      {
+        headers: {
+          Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        },
+      }
+    );
+    if (!userRes.ok) {
+      throw new Error(`Failed to fetch user data: ${userRes.statusText}`);
     }
-  );
-  const user = await userRes.json();
+    const user = await userRes.json();
 
-  const repoRes = await fetch(
-    `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?per_page=100`,
-    {
-      headers: {
-        Authorization: `token ${process.env.GITHUB_API_KEY}`,
-      },
+    const repoRes = await fetch(
+      `https://api.github.com/users/${process.env.NEXT_PUBLIC_GITHUB_USERNAME}/repos?per_page=100`,
+      {
+        headers: {
+          Authorization: `token ${process.env.GITHUB_API_KEY}`,
+        },
+      }
+    );
+    if (!repoRes.ok) {
+      throw new Error(`Failed to fetch repositories data: ${repoRes.statusText}`);
     }
-  );
+    let repos = await repoRes.json();
 
-  let repos = await repoRes.json();
+    repos = repos
+      .sort((a, b) => {
+        return (b.stargazers_count + b.watchers_count + b.forks_count) - (a.stargazers_count + a.watchers_count + a.forks_count);
+      })
+      .slice(0, 10);
 
-  // Sort and filter the repositories based on your criteria
-  repos = repos
-    .sort((a, b) => {
-      return (b.stargazers_count + b.watchers_count + b.forks_count) - (a.stargazers_count + a.watchers_count + a.forks_count);
-    })
-    .slice(0, 10);
-
-  return {
-    props: { title: 'GitHub', repos, user },
-    revalidate: 30,
-  };
+    return {
+      props: { title: 'GitHub', repos, user },
+      revalidate: 30,
+    };
+  } catch (error) {
+    console.error(error);
+    return {
+      props: { title: 'GitHub', repos: [], user: {} },
+    };
+  }
 }
 
 export default GithubPage;
