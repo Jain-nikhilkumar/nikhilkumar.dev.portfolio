@@ -1,0 +1,21 @@
+[
+ 
+    {
+      "id": 1,
+      "name": "Advanced Text Summarizer ",
+      "image": "https://m.media-amazon.com/images/I/414dx1u92XL._UX358_FMwebp_QL85_.jpg",
+      "description": "A deep learning-based tool for text summarization, using NLP models to generate concise summaries from large texts. Ideal for document summarization and news aggregation. It supports plain text, PDF docs, text files, website URLs for summarization, or YouTube video links for summarization.",
+      "url": "https://huggingface.co/spaces/Nikhil2411/textsumerizar1234",
+      "tags": [ " NLP ", " Deep Learning ", " Text Summarization ", " Python ", " Machine Learning "],
+      "source_code": "https://github.com/Jain-nikhilkumar/-Text-Summarization-with-NLP"
+
+    },
+    {
+      "id": 2,
+      "name": "AES Tool",
+      "image": "https://www.anonymistic.com/wp-content/uploads/2020/10/security_internet_network_encryption_privacy_padlock-100745987-large-950x500.jpg",
+      "description": "The AES Tool is a robust encryption and decryption application designed for secure data handling. Utilizing the Advanced Encryption Standard (AES) algorithm, this tool ensures that sensitive information remains protected and inaccessible to unauthorized users. Ideal for both personal and professional use, the AES Tool provides a straightforward interface for encrypting and decrypting text or files with ease.",
+      "tags": ["Encryption", "Decryption", "Security", "AES", "Data Protection", "Cryptography"],
+      "source_code": "https://github.com/Jain-nikhilkumar/AES_TOOL"
+    }
+]
