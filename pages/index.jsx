@@ -29,9 +29,6 @@ export default function HomePage() {
                     <span key='MIM' className='MIM'>
                        Machine Learning
                     </span>
-                    <span key='LLMs' className='LLMs'>
-                      LLMs
-                    </span>
                     <span key='GenAI' className='GenAI'>
                       Generative AI
                     </span>
