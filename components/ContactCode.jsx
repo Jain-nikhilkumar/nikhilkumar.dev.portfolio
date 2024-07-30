@@ -28,7 +28,7 @@ const contactItems = [
   },
   {
     social: 'Website',
-    link: 'gkos.dev',
+    link: 'nkradha.dev/',
     href: 'https://nkradha.vercel.app/',
   },
 ];
