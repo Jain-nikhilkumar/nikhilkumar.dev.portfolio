@@ -21,16 +21,16 @@ const contactItems = [
     link: 'credly.com/nikhil-jain.09508026',
     href: 'https://www.credly.com/users/nikhil-jain.09508026',
   },
-  // {
-  //   social: 'PyPi',
-  //   link: 'pypi.org/user/drkostas',
-  //   href: 'https://pypi.org/user/drkostas/',
-  // },
-  // {
-  //   social: 'Website',
-  //   link: 'gkos.dev',
-  //   href: 'https://gkos.dev',
-  // },
+  {
+    social:'Google.dev',
+    link : 'g.dev/developer2411',
+    href : 'https://g.dev/developer2411',
+  },
+  {
+    social: 'Website',
+    link: 'gkos.dev',
+    href: 'https://nkradha.vercel.app/',
+  },
 ];
 
 const ContactCode = () => {
