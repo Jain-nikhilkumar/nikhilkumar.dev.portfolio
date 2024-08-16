@@ -4,7 +4,7 @@
     "name": "Ar Flutter ",
     "image": "https://i.imgur.com/BX6C6ke.png",
     "description": "The Augmented Reality Flutter App is a cutting-edge application designed to bring immersive AR experiences to mobile users. Developed using Flutter, this app leverages AR technology to overlay digital content onto the real world, providing an interactive and engaging user experience.",
-    "tags": ["Gmail", "Dropbox", "MySQL", "AWS", "RDS", "CircleCI", "Heroku", "Crawler", "Scraper"],
+    "tags": ["ARcore","Flutter Ui"],
     "source_code": "https://github.com/Jain-nikhilkumar/Ar_flutter"
   },
   {
